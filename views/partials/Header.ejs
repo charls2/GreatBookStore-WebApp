@@ -1,0 +1,53 @@
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const link = document.getElementById('randomPick');
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behaviour
+            console.log('Link Clicked!');
+            // Custom logic
+        })
+    })
+</script>
+
+<header class="bg-lime-100 shadow-md mb-2">
+    <div class="container mx-auto sm:flex md:flex-row justify-between items-center p-4">
+        <div class="items-center text-center">
+            <a href="/" class="text-lg font-semibold text-gray-800">Great Book Store</a>
+        </div>
+        <div class="hidden md:flex md:space-x-8">
+            <a href="/" class="text-gray-600 hover:text-gray-800">Categories</a>
+            <a href="/" id="randomPick" class="text-gray-600 hover:text-gray-800">Random pick</a>
+        </div>
+        <div class="hidden md:ml-6 md:flex md:space-x-8">
+            <a href="/login" class="text-gray-600 hover:text-gray-800">Sign In</a>
+            <a href="/cart" class="text-gray-600 hover:text-gray-800">Cart</a>
+        </div>
+        <!--  -->
+    </div>
+    <!-- MOBILE MENU BUTTON -->
+    <div class="flex md:hidden justify-center items-center">
+        <button type="button" class="text-gray-600 hover:text-gray-800 p-4 bg-slate-800 rounded-lg" 
+            aria-controls="mobile-menu" aria-expanded="false">
+            Expand/Collapse
+        </button>
+    </div>
+    <!-- MOBILE MENU -->
+    <div class="md:hidden container justify-between items-center p-4" id="mobile-menu">
+        <div class="text-center">
+            <a href="/" class="bg-slate-200 text-gray-600 hover:text-gray-800 p-1 rounded-md">Categories</a>
+            <a href="#" class="bg-slate-200 text-gray-600 hover:text-gray-800 p-1 rounded-md" id="randomPick">Random pick</a>
+        </div>
+        <div class="text-center pt-4">
+            <a href="/login" class="bg-slate-200 text-gray-600 hover:text-gray-800 p-1 rounded-md">Sign In</a>
+            <a href="/cart" class="bg-slate-200 text-gray-600 hover:text-gray-800 p-1 rounded-md">Cart</a>
+        </div>
+    </div>
+</header>
+
+<script>
+    document.querySelector('button').addEventListener('click', () => {
+        const menu = document.getElementById('mobile-menu');
+        console.log('test5');
+        menu.classList.toggle('hidden');
+    });
+</script>

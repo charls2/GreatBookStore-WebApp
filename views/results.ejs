@@ -1,0 +1,10 @@
+<div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+    <h1 class="text-3xl font-bold mb-4">Search Results</h1>
+    <p class="text-lg mb-4">Labels detected:</p>
+    <ul class="list-disc list-inside space-y-2">
+        <% labels.forEach(label => { %>
+            <li class="text-gray-700"><%= label %></li>
+        <% }) %>
+    </ul>
+    <a href="/" class="inline-block mt-6 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">Back</a>
+</div>
